@@ -1,0 +1,394 @@
+/* ==========================================================
+   1. FONT IMPORTS
+========================================================== */
+@font-face {
+    font-family: 'TFRiot';
+    src: url('../fonts/tf-teenage-riot.otf') format('opentype');
+}
+@font-face {
+    font-family: 'CSCorpse';
+    src: url('../fonts/cscorpse-regular-demo.otf') format('opentype');
+}
+@font-face {
+    font-family: 'CSDecima';
+    src: url('../fonts/csdecima-regular-demo.otf') format('opentype');
+}
+
+
+/* ==========================================================
+   2. GLOBAL RESET + BASE
+========================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #FFFFFF;
+    color: #444444;
+    font-family: 'CSDecima', sans-serif;
+    line-height: 1.6;
+}
+
+
+/* ==========================================================
+   3. TYPOGRAPHY
+========================================================== */
+h1 {
+    font-family: 'TFRiot', sans-serif;
+    font-size: 3.6rem;
+    color: #000;
+    letter-spacing: 1px;
+}
+h2 {
+    font-family: 'CSCorpse', sans-serif;
+    font-size: 2.4rem;
+    color: #111;
+}
+h3, h4, h5, h6 {
+    font-family: 'CSDecima', sans-serif;
+    color: #333;
+}
+p {
+    font-size: 1.1rem;
+    max-width: 650px;
+}
+
+
+/* ==========================================================
+   4. HEADER & NAVIGATION
+========================================================== */
+.main-header {
+    width: 100%;
+    background: #FFF;
+    border-bottom: 2px solid #000;
+}
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img {
+    height: 70px;
+    width: auto;
+    display: block;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+/* NAV LINKS */
+.nav-links a {
+    position: relative;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'CSDecima', sans-serif;
+    color: #000;
+    padding-bottom: 6px;
+    transition: color 0.2s ease;
+}
+.nav-links a:hover {
+    color: #E73131;
+}
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+}
+.nav-links a:hover::after {
+    background: #000;
+}
+.nav-links a.active::after {
+    background: #E73131;
+}
+
+
+/* ==========================================================
+   5. HAMBURGER MENU (MOBILE)
+========================================================== */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.nav-toggle span {
+    width: 26px;
+    height: 3px;
+    background: #000;
+    transition: 0.25s ease;
+}
+
+/* X Animation */
+.nav-toggle.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* ==========================================================
+   6. LINKS
+========================================================== */
+a {
+    text-decoration: none;
+    color: #E73131;
+    transition: 0.2s ease;
+}
+a:hover {
+    color: #A00000;
+}
+
+
+/* ==========================================================
+   7. BUTTONS
+========================================================== */
+button,
+.hero-btn,
+.home-link,
+.flash-btn {
+    background: #E73131;
+    color: #000;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 2px solid #000;
+    font-family: 'CSDecima', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+button:hover,
+.hero-btn:hover,
+.home-link:hover,
+.flash-btn:hover {
+    background: #FFF;
+    box-shadow: 0 0 10px #E73131;
+}
+
+
+/* ==========================================================
+   8. HERO TITLE SECTION
+========================================================== */
+.hero-title {
+    text-align: center;
+    padding: 60px 20px;
+}
+.hero-title h1 {
+    font-family: 'TFRiot', sans-serif;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    animation: heroPop 0.6s ease-out forwards;
+}
+.hero-title p {
+    font-family: 'CSDecima', sans-serif;
+    font-size: 1.2rem;
+    color: #444;
+    margin: 0 auto;
+    opacity: 0;
+    animation: heroPop 0.6s ease-out forwards;
+    animation-delay: 0.12s;
+}
+
+
+/* ==========================================================
+   9. HERO VIDEO SECTION
+========================================================== */
+.hero-video-section {
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid #E0E0E0;
+}
+.hero-video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    opacity: 0;
+    animation: videoFadeUp 1.1s ease-out forwards;
+    animation-delay: 0.35s;
+}
+
+
+/* ==========================================================
+   10. CONTENT SECTIONS
+========================================================== */
+section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+
+/* ==========================================================
+   11. PREVIEW GRIDS
+========================================================== */
+.preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 25px 0 30px;
+}
+.preview-grid img {
+    width: 100%;
+    border: 2px solid #000;
+    border-radius: 6px;
+    transition: 0.25s ease;
+}
+.preview-grid img:hover {
+    transform: scale(1.05);
+}
+
+
+/* ==========================================================
+   12. PRODUCT / WORK / FLASH GRIDS
+========================================================== */
+.grid-3,
+.work-grid,
+.product-grid,
+.flash-grid {
+    display: grid;
+    gap: 20px;
+    justify-items: center;
+}
+.grid-3,
+.work-grid,
+.product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.flash-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.work-item,
+.product-item,
+.flash-item {
+    border: 2px solid #000;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.25s ease;
+}
+.work-item img,
+.product-item img,
+.flash-item img {
+    width: 100%;
+    transition: 0.25s ease;
+}
+.work-item:hover img,
+.product-item:hover img,
+.flash-item:hover img {
+    transform: scale(1.05);
+}
+
+.product-item h3 {
+    font-family: 'CSCorpse';
+    margin: 10px 0;
+    color: #111;
+}
+
+
+/* ==========================================================
+   13. FLASH PREVIEW BOXES
+========================================================== */
+.flash-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+.flash-preview {
+    flex: 1 1 300px;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #000;
+    border-radius: 10px;
+    transition: 0.25s ease;
+}
+.flash-preview:hover {
+    transform: scale(1.03);
+}
+
+
+/* ==========================================================
+   14. ANIMATIONS
+========================================================== */
+@keyframes heroPop {
+    0% { opacity: 0; transform: scale(0.85) translateY(20px); }
+    60% { opacity: 1; transform: scale(1.05) translateY(-4px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes videoFadeUp {
+    0% { opacity: 0; transform: translateY(25px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ==========================================================
+   15. RESPONSIVE STYLES
+========================================================== */
+
+/* MOBILE NAV */
+@media (max-width: 850px) {
+    .nav-toggle { display: flex; }
+    .nav-links {
+        position: absolute;
+        top: 90px;
+        right: 0;
+        width: 100%;
+        background: #FFF;
+        border-top: 2px solid #000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 25px 0;
+        transform: translateY(-210%);
+        transition: transform 0.35s ease;
+    }
+    .nav-links.nav-open { transform: translateY(0); }
+    .nav-links a { font-size: 1.4rem; }
+    .logo img { height: 55px; }
+}
+
+/* HERO TITLE RESPONSIVE */
+@media (max-width: 900px) {
+    .hero-title h1 { font-size: 3.2rem; letter-spacing: 1.5px; }
+    .hero-title p { font-size: 1.1rem; }
+}
+@media (max-width: 650px) {
+    .hero-title { padding: 50px 15px; }
+    .hero-title h1 { font-size: 2.6rem; letter-spacing: 1px; }
+    .hero-title p { font-size: 1rem; max-width: 90%; }
+}
+@media (max-width: 450px) {
+    .hero-title { padding: 40px 10px; }
+    .hero-title h1 { font-size: 2.1rem; letter-spacing: 0.5px; }
+    .hero-title p { font-size: 0.95rem; }
+}
+
+/* FLASH RESPONSIVE FIX */
+@media (max-width: 768px) {
+    .flash-container { flex-direction: column; }
+}
+

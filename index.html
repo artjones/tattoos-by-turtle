@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tattoos by Turtle</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Mobile Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<header class="main-header">
+  <nav class="navbar">
+
+    <!-- LOGO -->
+    <a href="index.html" class="logo">
+      <img src="images/logo/logo.png" alt="Tattoos by Turtle Logo">
+    </a>
+
+    <!-- HAMBURGER BUTTON (mobile only) -->
+    <button class="nav-toggle" aria-label="Open navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- NAV LINKS -->
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="flash.html">Flash</a></li>
+      <li><a href="merch.html">Merch</a></li>
+      <li><a href="booking.html">Book Now</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO TITLE ABOVE VIDEO -->
+  <section class="hero-title">
+    <h1>TATTOOS BY TURTLE</h1>
+    <p>Urban Ink • Graffiti Flow • Japanese Influence</p>
+  </section>
+
+  <!-- HERO VIDEO SECTION -->
+  <section class="hero-video-section">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="images/promo/hero.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="home-section">
+    <h2>Welcome to Tattoos by Turtle</h2>
+    <p>
+      Bold graffiti energy meets traditional Japanese tattoo artistry.
+      This is where street culture, symbolism, and clean execution collide.
+    </p>
+  </section>
+
+  <!-- PORTFOLIO PREVIEW -->
+  <section class="home-section">
+    <h2>Portfolio</h2>
+
+    <div class="preview-grid">
+      <img src="images/portfolio/sample1.jpg" alt="Tattoo sample 1">
+      <img src="images/portfolio/sample2.jpg" alt="Tattoo sample 2">
+      <img src="images/portfolio/sample3.jpg" alt="Tattoo sample 3">
+    </div>
+
+    <a href="portfolio.html" class="hero-btn">See Full Portfolio</a>
+  </section>
+
+  <!-- FLASH PREVIEW -->
+  <section class="home-section">
+    <h2>Flash Books</h2>
+
+    <div class="preview-grid">
+      <img src="images/flash/sample1.jpg" alt="Flash design sample 1">
+      <img src="images/flash/sample2.jpg" alt="Flash design sample 2">
+      <img src="images/flash/sample3.jpg" alt="Flash design sample 3">
+    </div>
+
+    <a href="flash.html" class="hero-btn">View Flash</a>
+  </section>
+
+  <!-- MERCH PREVIEW -->
+  <section class="home-section">
+    <h2>Merch</h2>
+
+    <div class="preview-grid">
+      <img src="images/merch/sample1.jpg" alt="Merch item 1">
+      <img src="images/merch/sample2.jpg" alt="Merch item 2">
+      <img src="images/merch/sample3.jpg" alt="Merch item 3">
+    </div>
+
+    <a href="merch.html" class="hero-btn">Shop Merch</a>
+  </section>
+
+</main>
+	
+	<script>
+	  const navToggle = document.querySelector('.nav-toggle');
+	  const navLinks = document.querySelector('.nav-links');
+
+	  navToggle.addEventListener('click', () => {
+		navLinks.classList.toggle('nav-open');
+		navToggle.classList.toggle('open');
+	  });
+	</script>
+
+</body>
+</html>
