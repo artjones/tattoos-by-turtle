@@ -391,4 +391,61 @@ section {
 @media (max-width: 768px) {
     .flash-container { flex-direction: column; }
 }
+/* -------------------------------
+   BOOKING FORM
+-------------------------------- */
+
+.booking-form {
+  max-width: 600px;
+  margin: 40px auto 0;
+  display: grid;
+  gap: 18px;
+}
+
+.booking-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.booking-form input,
+.booking-form textarea,
+.booking-form select {
+  margin-top: 6px;
+  padding: 12px;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #f6f6f6;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.booking-form input:focus,
+.booking-form textarea:focus,
+.booking-form select:focus {
+  outline: none;
+  border-color: #E73131;
+}
+
+.checkbox-label {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+/* -------------------------------
+   SQUARE BOOKING EMBED
+-------------------------------- */
+
+.square-booking {
+  max-width: 900px;
+  margin: 40px auto 0;
+}
+
+.square-booking iframe {
+  width: 100%;
+  min-height: 900px;
+  border: none;
+}
 
