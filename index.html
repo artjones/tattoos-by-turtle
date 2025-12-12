@@ -26,19 +26,12 @@
 <header class="main-header">
   <nav class="navbar">
 
-    <!-- LOGO -->
-    <a href="index.html" class="logo">
-      <img src="images/logo/logo.png" alt="Tattoos by Turtle Logo">
-    </a>
+ <!-- LOGO LEFT -->
+ <a href="index.html" class="logo">
+ <img src="images/logo/logo.png" alt="Tattoos by Turtle Logo">
+ </a>
 
-    <!-- HAMBURGER BUTTON (mobile only) -->
-    <button class="nav-toggle" aria-label="Open navigation">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <!-- NAV LINKS -->
+<!-- LINKS RIGHT -->
     <ul class="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
@@ -116,16 +109,6 @@
   </section>
 
 </main>
-	
-	<script>
-	  const navToggle = document.querySelector('.nav-toggle');
-	  const navLinks = document.querySelector('.nav-links');
-
-	  navToggle.addEventListener('click', () => {
-		navLinks.classList.toggle('nav-open');
-		navToggle.classList.toggle('open');
-	  });
-	</script>
 
 </body>
 </html>
