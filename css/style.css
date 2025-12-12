@@ -415,6 +415,37 @@ section {
   opacity: 0.85;
 }
 /* -------------------------------
+   DEPOSIT SECTION
+-------------------------------- */
+
+.deposit-section {
+  background: #f7f7f7;
+  border: 2px solid #000;
+  border-radius: 6px;
+}
+
+.deposit-list {
+  list-style: none;
+  margin-top: 25px;
+  padding: 0;
+}
+
+.deposit-list li {
+  padding-left: 18px;
+  margin-bottom: 14px;
+  position: relative;
+  font-size: 14px;
+}
+
+.deposit-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #E73131;
+  font-weight: bold;
+}
+
+/* -------------------------------
    BOOKING SECTIONS
 -------------------------------- */
 
@@ -493,4 +524,40 @@ section {
   border-left: 3px solid #E73131;
   font-size: 13px;
   opacity: 0.9;
+}
+/* -------------------------------
+   BOOKING HELPER
+-------------------------------- */
+
+.helper-section {
+  background: #fff;
+  border: 2px dashed rgba(0,0,0,0.15);
+  border-radius: 6px;
+}
+
+.helper-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.helper-card h3 {
+  font-family: 'CSCorpse', sans-serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.helper-card p {
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* MOBILE */
+@media (max-width: 850px) {
+  .helper-grid {
+    grid-template-columns: 1fr;
+  }
 }
