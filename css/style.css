@@ -391,61 +391,106 @@ section {
 @media (max-width: 768px) {
     .flash-container { flex-direction: column; }
 }
+
 /* -------------------------------
-   BOOKING FORM
+   BOOKING PAGE HERO
 -------------------------------- */
 
-.booking-form {
+.page-hero {
+  text-align: center;
+  padding: 80px 20px 60px;
+}
+
+.page-hero h1 {
+  font-family: 'TFRiot', sans-serif;
+  font-size: clamp(42px, 6vw, 72px);
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.page-hero p {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+/* -------------------------------
+   BOOKING SECTIONS
+-------------------------------- */
+
+.booking-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.booking-section h2 {
+  font-family: 'CSCorpse', sans-serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.booking-section h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  margin-top: 10px;
+  background: #E73131;
+  opacity: 0.9;
+  transform: skewX(-12deg);
+}
+.booking-section p {
   max-width: 600px;
-  margin: 40px auto 0;
-  display: grid;
-  gap: 18px;
+}
+.booking-section + .booking-section {
+  border-top: 1px dashed rgba(0,0,0,0.08);
 }
 
-.booking-form label {
-  display: flex;
-  flex-direction: column;
+/* -------------------------------
+   BOOKING RULES
+-------------------------------- */
+
+.booking-rules {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0 0;
+}
+
+.booking-rules li {
+  padding-left: 18px;
+  margin-bottom: 14px;
+  position: relative;
   font-size: 14px;
-  letter-spacing: 0.5px;
+  opacity: 0.9;
 }
 
-.booking-form input,
-.booking-form textarea,
-.booking-form select {
-  margin-top: 6px;
-  padding: 12px;
-  background: #111;
-  border: 1px solid rgba(255,255,255,0.15);
-  color: #f6f6f6;
-  font-family: inherit;
-  font-size: 14px;
+.booking-rules li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #E73131;
+  font-weight: bold;
 }
 
-.booking-form input:focus,
-.booking-form textarea:focus,
-.booking-form select:focus {
-  outline: none;
-  border-color: #E73131;
-}
-
-.checkbox-label {
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  font-size: 13px;
-}
 /* -------------------------------
    SQUARE BOOKING EMBED
 -------------------------------- */
 
 .square-booking {
   max-width: 900px;
-  margin: 40px auto 0;
+  margin: 50px auto 0;
+  padding: 20px;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 4px;
+  background: #fafafa;
 }
 
-.square-booking iframe {
-  width: 100%;
-  min-height: 900px;
-  border: none;
+.booking-note {
+  margin-top: 30px;
+  padding-left: 14px;
+  border-left: 3px solid #E73131;
+  font-size: 13px;
+  opacity: 0.9;
 }
-
