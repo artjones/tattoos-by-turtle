@@ -1,46 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tattoos by Turtle — Book Appointment</title>
+  <title>Book a Tattoo | Tattoos by Turtle</title>
+
+  <meta name="description" content="Book a tattoo with Turtle. Custom tattoos, flash designs, and professional booking process.">
+
   <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
 
-  <!-- NAVIGATION -->
-  <header class="main-header">
-    <nav class="navbar">
-      <a href="index.html" class="logo">
-        <img src="images/logo/your-logo.png" alt="Tattoos by Turtle Logo">
-      </a>
+<!-- NAVIGATION -->
+<header class="main-header">
+  <nav class="navbar">
 
-      <ul class="nav-links">
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="flash.html">Flash</a></li>
-        <li><a href="merch.html">Merch</a></li>
-        <li><a href="booking.html" class="active">Book Now</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
-  </header>
+    <a href="index.html" class="logo">
+      <img src="images/logo/logo.png" alt="Tattoos by Turtle Logo">
+    </a>
 
-  <!-- BOOKING HERO -->
-  <section class="booking-hero">
-    <div class="container">
-      <h1>Book a Tattoo Session</h1>
-      <p>Schedule your appointment with Tattoos by Turtle. Choose your preferred date and time, and let’s create some bold urban ink together.</p>
-    </div>
+    <button class="nav-toggle" aria-label="Open navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="flash.html">Flash</a></li>
+      <li><a href="merch.html">Merch</a></li>
+      <li><a href="booking.html" class="active">Book Now</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+
+  </nav>
+</header>
+
+<main>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <h1>Book a Tattoo</h1>
+    <p>Custom work • Flash • Serious inquiries only</p>
   </section>
 
-  <!-- SQUARE BOOKING WIDGET -->
-  <section class="booking-widget">
-    <div class="container">
-      <!-- Replace the 'data-url' with your Square booking link -->
-      <iframe src="https://book.squareup.com/appointments/masi9osefqqzyw/location/LT12SQ8PH695Z/services" style="border:none;width:100%;min-height:800px;" allowtransparency="true">
-      </iframe>
-    </div>
+  <!-- BOOKING RULES -->
+  <section class="booking-section">
+    <h2>Before You Book</h2>
+
+    <ul class="booking-rules">
+      <li>All appointments require a non-refundable deposit.</li>
+      <li>Custom tattoos are original and designed per client.</li>
+      <li>Flash designs can be repeated unless stated otherwise.</li>
+      <li>No copy tattoos or stolen artwork.</li>
+      <li>Please allow time for responses — quality work takes time.</li>
+    </ul>
   </section>
+
+  <!-- BOOKING METHOD -->
+  <section class="booking-section">
+    <h2>Start Your Booking</h2>
+
+    <p>
+      Click below to begin the booking process.
+      You’ll be asked about your idea, placement, size, and availability.
+    </p>
+
+    <a href="#" class="hero-btn">Booking Form (Coming Soon)</a>
+  </section>
+
+  <!-- CONTACT BACKUP -->
+  <section class="booking-section">
+    <h2>Questions?</h2>
+    <p>
+      For general questions only (not bookings), you can email:
+      <br>
+      <strong>booking@tattoosbyturtle.com</strong>
+    </p>
+  </section>
+
+</main>
+
+<script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('nav-open');
+    navToggle.classList.toggle('open');
+  });
+</script>
 
 </body>
 </html>
